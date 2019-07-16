@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+    <link href="{{ url_for('static', filename='css/datatables.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/nucleo.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/fontawesome.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/argon.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/toggle.css') }}" rel="stylesheet">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <title>STARTER - DASHBOARD</title>
+</head>
+<body>
+{% block navbar %}
+    <nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-poupex">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../static/images/favicon.png" alt="">
+            </a>
+            <h3 class="text-white mr-auto mt-2">STARTER - DASHBOARD</h3>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
+                        aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-primary">
+
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                    data-target="#navbar-primary" aria-controls="navbar-primary"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+{% endblock %}
+
+{% block body %} {% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}
+<script src="{{ url_for('static', filename='js/core/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/argon.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/datatables.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/buttons.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/html5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/select.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/print.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/pdfmake.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/swal.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/jszip.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/toggle.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/vsf_fonts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/flash.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/charts.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/table_api_example.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/table_array_example.js') }}" defer></script>
+
+<script defer>
+    $(function () {
+        auto_reload = window.localStorage.getItem('auto_reload') == 'true' ? 'on' : null
+        $('#reload').bootstrapToggle(auto_reload);
+        $('body').on('change', '#reload', function () {
+            window.localStorage.setItem('auto_reload', $('#reload').prop('checked'))
+            refresh();
+        });
+        setInterval(function () {
+            refresh()
+        }, 30000);
+
+        function refresh() {
+            if (window.localStorage.getItem('auto_reload') == 'true' &&
+                !$("#exampleModal").hasClass('show')
+            ) {
+                window.location.reload();
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

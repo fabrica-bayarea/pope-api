@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %} - LOGIN{% endblock %}
+{% block body %}
+    <div class="row justify-content-center mt-5 ml-auto mr-auto">
+        <div class="col-lg-5 col-md-7">
+            <div class="card bg-secondary shadow border-0">
+                <div class="card-header bg-transparent pb-5">
+                    <h2 class="text-center">Login</h2>
+                </div>
+                <div class="card-body px-lg-5 py-lg-5">
+                    {% include 'components/messages.html' %}
+                    <form method="POST"
+                          action="{{ url_for('auth.login') }}"
+                          role="form">
+                        {{ form.csrf_token }}
+                        <div class="form-group mb-3">
+                            <div class="input-group input-group-alternative bg-white mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                                </div>
+                                {{ form.username() }}
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative bg-white">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    {{ form.password() }}
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" id="submit" class="btn bg-poupex text-white my-4">Entrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

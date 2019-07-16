@@ -1,0 +1,45 @@
+image: python:3.6-slim-jessie
+
+stages:
+  - test
+
+
+before_script:
+  - python -V
+  - apt-get update -qq
+  - apt-get install -y --no-install-recommends build-essential
+  - apt-get clean
+  - pip install -r requirements.txt
+
+
+lint:
+  stage: test
+  script:
+    - pip install flake8
+    - flake8
+  only:
+    - branches
+
+#unit:
+#  stage: test
+#  script:
+#    - echo "Starting Unit Test"
+#    - make test-unit
+#  only:
+#    - branches
+
+# test-integration:
+#   stage: test
+#   script:
+#     - echo "Starting tests..."
+#     - make test-integration
+#   only:
+#     - branches
+
+# test-coverage:
+#   stage: test
+#   script:
+#     - echo "Starting tests..."
+#     - make test-coverage
+#   only:
+#     - branches

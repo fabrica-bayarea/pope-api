@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-lg-8 mt-5  mb-5">
+        <div class="card shadow">
+            <div class="card-header border-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h3 class="mb-0">Diferenças</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive ">
+                <!-- Projects table -->
+                <table class="table">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>Sistema</th>
+                        <th>Quantidade</th>
+                        <th>Percetual</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">
+                            Sistema 1
+                        </th>
+                        <td>
+                            30
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <span class="mr-2">30%</span>
+                                <div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                             aria-valuenow="30" aria-valuemin="0"
+                                             aria-valuemax="100"
+                                             style="width: 30%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Sistema 2
+                        </th>
+                        <td>
+                            70
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <span class="mr-2">70%</span>
+                                <div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-gradient-info" role="progressbar"
+                                             aria-valuenow="70" aria-valuemin="0"
+                                             aria-valuemax="100"
+                                             style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>100</th>
+                        <th></th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="ml-auto mr-auto">
+        {% include 'components/graph_pie_example.html' %}
+    </div>
+</div>

@@ -1,0 +1,5 @@
+[flake8]
+ignore = C901, E126, E127, E122, E501
+exclude =
+    venv
+max-complexity = 10

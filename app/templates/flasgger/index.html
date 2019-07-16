@@ -1,0 +1,105 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>STARTER - API</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/swagger-ui.css">
+    <link rel="icon" type="image/png" href="/static/images/logo-fhe-poupex.png"/>
+    <style>
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+        }
+    </style>
+    <!-- To add custom code here override the template templates/flasgger/custom_head.html -->
+    <!-- Include custom css and top js in templates/flasgger/head.html -->
+
+</head>
+
+<body>
+
+<div class='swagger-ui'>
+    <div class="wrapper">
+        <section class="clear">
+
+        </section>
+    </div>
+</div>
+
+<div id="swagger-ui">
+    <div data-reactroot="" class="swagger-ui">
+        <div>
+            <div class="information-container wrapper">
+                <section class="block col-12">
+                    <!-- ADDS THE LOADER SPINNER -->
+                    <div class="loading-container">
+                        <div class="loading"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="swagger-ui"></div>
+
+<script src="/static/js/core/swagger-ui-bundle.js"></script>
+<script src="/static/js/core/swagger-ui-standalone-preset.js"></script>
+<script src="/static/js/core/jquery.js" type='text/javascript'></script>
+
+<script>
+    window.onload = function () {
+
+        // Build a system
+        const ui = SwaggerUIBundle(
+            Object.assign(
+                {
+
+                    url: "/apispec_1.json",
+                    dom_id: '#swagger-ui',
+                    validatorUrl: null,
+                    deepLinking: true,
+                    jsonEditor: true,
+
+                    apisSorter: "alpha",
+                    presets: [
+                        SwaggerUIBundle.presets.apis,
+                        SwaggerUIStandalonePreset
+                    ],
+                    plugins: [
+                        SwaggerUIBundle.plugins.DownloadUrl
+                    ],
+
+                    layout: "StandaloneLayout",
+
+                },
+                {}
+            )
+        )
+
+        window.ui = ui
+
+        $(".topbar-wrapper .link span").replaceWith("<span>STARTER - API</span>");
+        $(".link img").hide()
+        $(".download-url-wrapper").hide()
+        $('.link').prepend(`<img src="">`)
+    }
+
+</script>
+<footer>
+
+</footer>
+</body>
+</html>

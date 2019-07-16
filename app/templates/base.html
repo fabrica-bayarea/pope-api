@@ -14,16 +14,16 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/toggle.css') }}" rel="stylesheet">
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
-    <title>STARTER - DASHBOARD</title>
+    <title>Justiça Comunitária - TJDFT</title>
 </head>
 <body>
 {% block navbar %}
     <nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-poupex">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../static/images/favicon.png" alt="">
+            <a class="navbar-brand ml-auto mr-auto" href="#">
+                <img src="../static/images/favicon.png" id='logo' alt="">
             </a>
-            <h3 class="text-white mr-auto mt-2">STARTER - DASHBOARD</h3>
+            <h3 class="mr-auto mt-2">JUSTIÇA COMUNITÁRIA ADMINISTRAÇÃO</h3>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
                         aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,6 @@
 <script src="{{ url_for('static', filename='js/core/vsf_fonts.js') }}"></script>
 <script src="{{ url_for('static', filename='js/core/flash.js') }}"></script>
 <script src="{{ url_for('static', filename='js/core/charts.min.js') }}"></script>
-
 <script src="{{ url_for('static', filename='js/table_api_example.js') }}" defer></script>
 <script src="{{ url_for('static', filename='js/table_array_example.js') }}" defer></script>
 

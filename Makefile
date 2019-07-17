@@ -8,3 +8,6 @@ docker: docker-build docker-run
 
 run:
 	gunicorn -c gunicorn.py run:app
+
+run-dev:
+	export FLASK_APP=run.py && export FLASK_DEBUG=1 && flask run

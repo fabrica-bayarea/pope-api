@@ -4,16 +4,16 @@ $(document).ready(function () {
         buttons: [
             {
                 extend: 'excel',
-                className: 'btn bg-poupex text-white'
+                className: 'btn bg-tj text-white'
             }, {
                 extend: 'csv',
-                className: 'btn bg-poupex text-white'
+                className: 'btn bg-tj text-white'
             }, {
                 extend: 'pdf',
-                className: 'btn bg-poupex text-white'
+                className: 'btn bg-tj text-white'
             }, {
                 extend: 'print',
-                className: 'btn bg-poupex text-white'
+                className: 'btn bg-tj text-white'
             },
         ],
         "language": {

@@ -5,7 +5,6 @@ from flask_cors import CORS
 from config import app_config
 from flasgger import Swagger
 
-
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
 login_manager.login_message = 'Informe suas Credenciais!'
@@ -29,6 +28,9 @@ def create_app(config_name):
     app.register_blueprint(dashboard_blueprint)
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
+    from .organizations import organizations as organizations_blueprint
+    app.register_blueprint(organizations_blueprint)
+    login_manager.init_app(app)
     from .api import api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api')
     login_manager.init_app(app)

@@ -18,12 +18,12 @@
 </head>
 <body>
 {% block navbar %}
-    <nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-poupex">
+    <nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-tj">
         <div class="container">
             <a class="navbar-brand ml-auto mr-auto" href="#">
-                
+
             </a>
-            <h3 class="mr-auto mt-2">JUSTIÇA COMUNITÁRIA ADMINISTRAÇÃO</h3>
+            <h3 class="mr-auto mt-2 text-white">JUSTIÇA COMUNITÁRIA -  ADMINISTRAÇÃO</h3>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
                         aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -33,15 +33,7 @@
                 <div class="navbar-collapse-header">
                     <div class="row">
                         <div class="col-6 collapse-brand">
-                        </div>
-                        <div class="col-6 collapse-close">
-                            <button type="button" class="navbar-toggler" data-toggle="collapse"
-                                    data-target="#navbar-primary" aria-controls="navbar-primary"
-                                    aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                <span></span>
-                                <span></span>
-                            </button>
+                            <a href="/logout">Sair</a>
                         </div>
                     </div>
                 </div>
@@ -73,29 +65,7 @@
 <script src="{{ url_for('static', filename='js/core/flash.js') }}"></script>
 <script src="{{ url_for('static', filename='js/core/charts.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/table_api_example.js') }}" defer></script>
-<script src="{{ url_for('static', filename='js/table_array_example.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/table_organizations.js') }}" defer></script>
 
-<script defer>
-    $(function () {
-        auto_reload = window.localStorage.getItem('auto_reload') == 'true' ? 'on' : null
-        $('#reload').bootstrapToggle(auto_reload);
-        $('body').on('change', '#reload', function () {
-            window.localStorage.setItem('auto_reload', $('#reload').prop('checked'))
-            refresh();
-        });
-        setInterval(function () {
-            refresh()
-        }, 30000);
-
-        function refresh() {
-            if (window.localStorage.getItem('auto_reload') == 'true' &&
-                !$("#exampleModal").hasClass('show')
-            ) {
-                window.location.reload();
-            }
-        }
-
-    })
-</script>
 </body>
 </html>

@@ -1,47 +1,37 @@
 {% extends "base.html" %}
 {% block title %}STARTER - DASHBOARD{% endblock %}
 {% block body %}
-        <div class="breadcrumb">
-            <ul class="nav nav-tabs" id="myTab">
+    <div class="breadcrumb">
+        <ul class="nav nav-tabs" id="myTab">
 
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                       aria-controls="home" aria-selected="true">Relatório</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                   aria-controls="home" aria-selected="true">Relatório</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" id="dados-array-tab" data-toggle="tab" href="#dados-array" role="tab"
-                       aria-controls="dados-array" aria-selected="false">Array</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dados-array-tab" data-toggle="tab" href="#dados-array" role="tab"
+                   aria-controls="dados-array" aria-selected="false">Organizações</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" id="dados-api-tab" data-toggle="tab" href="#dados-api" role="tab"
-                       aria-controls="dados-api" aria-selected="false">Api</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dados-api-tab" data-toggle="tab" href="#dados-api" role="tab"
+                   aria-controls="dados-api" aria-selected="false">Usuários</a>
+            </li>
 
-            </ul>
+        </ul>
 
-            <div class="breadcrumb-item ml-auto d-none d-lg-block text-dark" aria-current="page">
-                <label for="reload">Atualização automática</label>
-                <input id="reload"
-                       type="checkbox"
-                       data-toggle="toggle"
-                       data-onstyle="success"
-                       data-offstyle="danger"
-                       data-size="small"
-                       data-on="Ativado"
-                       data-off="Desativado">
-            </div>
 
-        </div>
+    </div>
     <div class="tab-content" id="myTabContent">
 
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="container-fluid">
-                <h1 class="text-center mt-3 text-dark">Relatório de Diferenças
+                <h1 class="text-center mt-3 text-dark">Seja bem Vindo!
                     <i class="ni ni-calendar-grid-58"></i>
                     <i class="ni ni-chart-bar-32"></i>
                 </h1>
+                <p class="text-center"> Aqui se encontram informações sobre as organizações do distrito federal</p>
                 <div class="col-lg-6 ml-auto mr-auto">
                     {% include'components/messages.html' %}
                 </div>
@@ -60,10 +50,14 @@
 
         <div class="tab-pane fade" id="dados-array" role="tabpanel" aria-labelledby="dados-array-tab">
             <div class="col-lg-12">
-                <h1 class="text-center text-dark">Tabela de dados com array</h1>
+                <h1 class="text-center text-dark">Organizações</h1>
+                <a href="/organization" class="btn btn-done bg-animate">
+                    <i class="ni ni-fat-add"></i>
+                    Adicionar nova Organização
+                </a>
                 <div class="card mb-4 mb-lg-0 mt-5">
                     <div class="table-responsive">
-                        {% include 'components/table_array_example.html' %}
+                        {% include 'components/table_organizations.html' %}
                     </div>
                 </div>
             </div>
@@ -72,7 +66,7 @@
 
         <div class="tab-pane fade" id="dados-api" role="tabpanel" aria-labelledby="dados-api-tab">
             <div class="col-lg-12">
-                <h1 class="text-center text-dark">Tabela de dados com api</h1>
+                <h1 class="text-center text-dark">Usuários da aplicação!</h1>
                 <div class="card mb-4 mb-lg-0 mt-5">
                     <div class="table-responsive">
                         {% include 'components/table_api_example.html' %}

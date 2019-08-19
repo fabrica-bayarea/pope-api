@@ -1,8 +1,5 @@
 select *
 from area;
-
-show tables;
-
 select *
 from sub_area;
 
@@ -14,6 +11,14 @@ insert into area (name, description)
 values ('Área de Saúde', 'Área de Saúde');
 insert into area (name, description)
 values ('Área Educacional', 'Área Educacional');
+
+
+insert into sub_area (name, description)
+values ('Serviço Psicossocial', 'Serviço Psicossocial');
+
+
+insert into sub_area (name, description)
+values ('Serviço Psicossocial', 'Serviço Psicossocial');
 
 
 - Atendimento Jurídico Gratuito
@@ -30,7 +35,7 @@ values ('Área Educacional', 'Área Educacional');
 
 
 SubÁreas:
-- Serviço Psicossocial
+- 
 
 SubÁreas:
 - Saúde

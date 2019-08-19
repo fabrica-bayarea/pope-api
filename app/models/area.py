@@ -10,4 +10,3 @@ class SubArea(db.Model):
     name = db.Column(db.String(25), unique=True)
     description = db.Column(db.Text)
     id_area = db.Column(db.Integer)
-    id_attendance = db.Column(db.Integer)

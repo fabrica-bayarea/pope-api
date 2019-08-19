@@ -1,5 +1,108 @@
 {% extends "base.html" %}
 {% block title %}STARTER - DASHBOARD{% endblock %}
 {% block body %}
-oi
+    <div class="row">
+        <div class="col-xl-8 order-xl-1">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Formulário de organização!</h3>
+                        </div>
+                        <div class="col-4 text-right">
+                            <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    id_area
+                    id_sub_area
+                    id_attendance
+                    <form>
+                        <h6 class="heading-small text-muted mb-4">Informações da organização</h6>
+                        <i class="fas fa-info-circle"></i>
+                        <div class="row text-center">
+                            <div class="col-lg-6 ml-auto mr-auto">
+
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Nome da Organização</label>
+                                    <input type="text" id="input-name"
+                                           class="form-control form-control-alternative"
+                                           placeholder="Digite aqui o nome da organização"
+                                           name="name">
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" id="free" type="checkbox"
+                                           name="free">
+                                    <label class="custom-control-label" for="free">Serviço Gratuito</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <!-- Address -->
+                        <h6 class="heading-small text-muted mb-4">Contatos e Localização
+                            <i class="ni ni-pin-3"></i>
+                        </h6>
+
+                        <div class="pl-lg-4">
+                            <div class="row text-center">
+                                <div class="col-md-12">
+
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-email">Email</label>
+                                        <input type="email" id="input-email"
+                                               class="form-control form-control-alternative"
+                                               placeholder="org@exemplo.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="input-tell">Telefone da
+                                            Organização</label>
+                                        <input type="text" id="input-tell"
+                                               class="form-control form-control-alternative"
+                                               placeholder="(61) 3333-3333"
+                                               name="tell">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="input-address">Endereço</label>
+                                        <input id="input-address" class="form-control form-control-alternative"
+                                               placeholder="Endereço da organização"
+                                               value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="input-city">City</label>
+                                        <input type="text" id="input-city" class="form-control form-control-alternative"
+                                               placeholder="City" value="New York">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <h6 class="heading small text-muted mb-4">Horario de Funcionamento</h6>
+                            <i class="ni ni-watch-time"></i>
+                        </div>
+                        <hr class="my-4">
+                        <!-- Description -->
+
+                        <div class="pl-lg-4">
+                            <div class="form-group focused">
+                                <label>Detalhe um pouco a organização</label>
+                                <textarea rows="4" class="form-control form-control-alternative"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

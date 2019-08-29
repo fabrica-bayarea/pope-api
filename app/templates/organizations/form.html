@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}STARTER - DASHBOARD{% endblock %}
+{% block title %}Cadstro Organização{% endblock %}
 {% block body %}
     <div class="row">
         <div class="col-xl-8 order-xl-1">
@@ -31,6 +31,14 @@
                                            placeholder="Digite aqui o nome da organização"
                                            name="name">
                                 </div>
+                                <label class="form-control-label" for="area">Area</label>
+                                <select class="form-control" id="area">
+                                    <option value="">Informe A área</option>
+                                    <option>Júridica</option>
+                                    <option>Social</option>
+                                    <option>Educacional</option>
+                                </select>
+
                                 <div class="custom-control custom-checkbox mb-3">
                                     <input class="custom-control-input" id="free" type="checkbox"
                                            name="free">
@@ -78,7 +86,7 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="input-city">City</label>
+                                        <label class="form-control-label" for="input-city">Cidade</label>
                                         <input type="text" id="input-city" class="form-control form-control-alternative"
                                                placeholder="City" value="New York">
                                     </div>
@@ -89,10 +97,32 @@
                         <div class="text-center">
                             <h6 class="heading small text-muted mb-4">Horario de Funcionamento</h6>
                             <i class="ni ni-watch-time"></i>
+                            <br>
+                            <label class="form-control-label" for="input-name">Hora inicial</label>
+
+                            <input type="time" id="input-name"
+                                   class="form-control form-control-alternative"
+                                   name="name">
+
+                            <label class="form-control-label" for="input-name">Hora Final</label>
+                            <input type="time" id="input-name"
+                                   class="form-control form-control-alternative"
+                                   name="name">
+                            <label class="form-control-label" for="input-name">Hora Inicial do intervalo</label>
+
+                            <input type="time" id="input-name"
+                                   class="form-control form-control-alternative"
+                                   name="name">
+
+                            <label class="form-control-label" for="input-name">Hora Final do intervalo</label>
+
+                            <input type="time" id="input-name"
+                                   class="form-control form-control-alternative"
+                                   name="name">
+
                         </div>
                         <hr class="my-4">
                         <!-- Description -->
-
                         <div class="pl-lg-4">
                             <div class="form-group focused">
                                 <label>Detalhe um pouco a organização</label>

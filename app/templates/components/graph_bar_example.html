@@ -2,39 +2,100 @@
 <canvas id="totalChart"></canvas>
 <script defer>
     var ctx = document.getElementById('totalChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: [
-                'Dado 1',
-                'Dado 2',
-                'Dado 3',
-                'Dado 4',
-                'Dado 5',
-            ],
-            datasets: [{
-                data: [
-                    100,
-                    200,
-                    300,
-                    400,
-                    500,
-                ],
-                label: 'Diferenças',
-                backgroundColor: [
-                    'rgba(110, 235, 131, 1)',
-                    'rgba(54, 0, 233, 1)',
-                    'rgba(240, 162, 2, 1)',
-                    'rgba(242, 129, 35, 1)',
-                    'rgba(204, 68, 75, 1)'
-                ],
-            }]
-        },
-        options: {
-            title: {
-                text: 'Informações',
-            },
-        }
-    });
+    var labels = [];
+
+    fetch('/api/geo')
+        .then(response => response.json())
+        .then(data => {
+            data.map(function (city) {
+                labels.push(city.fields.name)
+            });
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [{
+                        data: [
+                            20,
+                            10,
+                            200,
+                            20,
+                            200,
+                            20,
+                            100,
+                            300,
+                            300,
+                            0,
+                            300,
+                            200,
+                            300,
+                            200,
+                            300,
+                            100,
+                            100,
+                            300,
+                            400,
+                            500,
+                            600,
+                            700,
+                            100,
+                            400,
+                            300,
+                            400,
+                            400,
+                            200,
+                            50,
+                            5,
+                            20,
+                        ],
+                        label: 'Lista de Organizações por cidade',
+                        backgroundColor: [
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(240, 162, 2, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(110, 235, 131, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(54, 0, 233, 1)',
+                            'rgba(242, 129, 35, 1)',
+                            'rgba(204, 68, 75, 1)'
+                        ],
+                    }]
+                },
+                options: {
+                    title: {
+                        text: 'Informações',
+                    },
+                }
+            });
+
+        })
+        .catch(error => console.error(error))
+
+
 </script>
 

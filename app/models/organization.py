@@ -12,4 +12,3 @@ class Organization(db.Model):
     free = db.Column(db.Boolean)
     id_area = db.Column(db.Integer)
     id_sub_area = db.Column(db.Integer)
-    id_attendance = db.Column(db.Integer)

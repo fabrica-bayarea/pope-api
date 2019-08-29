@@ -16,13 +16,9 @@
                 <a class="nav-link" id="dados-api-tab" data-toggle="tab" href="#dados-api" role="tab"
                    aria-controls="dados-api" aria-selected="false">Usuários</a>
             </li>
-
         </ul>
-
-
     </div>
     <div class="tab-content" id="myTabContent">
-
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="container-fluid">
                 <h1 class="text-center mt-3 text-dark">Seja bem Vindo!
@@ -34,18 +30,12 @@
                     {% include'components/messages.html' %}
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mt-5">
-                        {% include 'components/table_relationship_example.html' %}
-                    </div>
-                    <div class="col-md-9 ">
+                    <div class="col-lg-12">
                         {% include 'components/graph_bar_example.html' %}
                     </div>
                 </div>
-                {% include 'components/table_difference_example.html' %}
             </div>
         </div>
-
-
         <div class="tab-pane fade" id="dados-array" role="tabpanel" aria-labelledby="dados-array-tab">
             <div class="col-lg-12">
                 <h1 class="text-center text-dark">Organizações</h1>
@@ -60,14 +50,16 @@
                 </div>
             </div>
         </div>
-
-
         <div class="tab-pane fade" id="dados-api" role="tabpanel" aria-labelledby="dados-api-tab">
             <div class="col-lg-12">
                 <h1 class="text-center text-dark">Usuários da aplicação!</h1>
+                <a href="/create-user" class="btn btn-done bg-animate">
+                    <i class="ni ni-fat-add"></i>
+                    Adicionar nova Organização
+                </a>
                 <div class="card mb-4 mb-lg-0 mt-5">
                     <div class="table-responsive">
-                        {% include 'components/table_api_example.html' %}
+                        {% include 'components/table_users.html' %}
                     </div>
                 </div>
             </div>

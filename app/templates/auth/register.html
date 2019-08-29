@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Cadstro Organização{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-xl-8 ml-auto mr-auto order-xl-1">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Formulário de Usuário!</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+
+                        <hr class="my-4">
+                        <!-- Email -->
+                        <div class="pl-lg-4">
+                            <div class="form-group focused">
+                                <label>Email</label>
+                                <input type="email" id="input-email"
+                                       class="form-control form-control-alternative"
+                                       name="email">
+                            </div>
+                        </div>
+                        <!-- Username -->
+                        <div class="pl-lg-4">
+                            <div class="form-group focused">
+                                <label>Matrícula</label>
+                                <input type="text" id="input-username"
+                                       class="form-control form-control-alternative"
+                                       name="username">
+                            </div>
+                        </div>
+
+                        <!-- Setor -->
+                        <div class="pl-lg-4">
+                            <div class="form-group focused">
+                                <label>Setor</label>
+                                <input type="text" id="input-sector"
+                                       class="form-control form-control-alternative"
+                                       name="sector">
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-6 ml-auto mr-auto">
+
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" id="super_admin" type="checkbox"
+                                           name="super_admin">
+                                    <label class="custom-control-label" for="super_admin">Administrador</label>
+                                    <p>Marque a caixa caso a pessoa possa administrar a aplicação</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="pl-lg-4">
+                            <div class="form-group focused">
+                                <label>Senha</label>
+                                <input type="password" id="input-password"
+                                       class="form-control form-control-alternative"
+                                       name="password">
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-info ml-auto mr-auto">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

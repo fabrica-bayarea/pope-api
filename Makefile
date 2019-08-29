@@ -1,8 +1,8 @@
 docker-build:
-	docker build -t starter-dashboard .
+	docker build -t pope-api .
 
 docker-run:
-	docker run --env-file .env -p 5000:80 starter-dashboard
+	docker run --env-file .env -p 5000:80 pope-api
 
 docker: docker-build docker-run
 

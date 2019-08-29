@@ -2,7 +2,7 @@ from app.models.auth import User
 from . import auth
 from flask import render_template, \
     redirect, url_for, request, flash, g
-from .forms import LoginForm
+from .forms import LoginForm, RegisterForm
 from flask_login import logout_user, \
     login_required, login_user, current_user
 from .. import login_manager
@@ -11,6 +11,16 @@ from .. import login_manager
 @auth.before_request
 def get_current_user():
     g.user = current_user
+
+
+@auth.route('/create-user', methods=['GET', 'POST'])
+@login_required
+def create():
+    logged = User.query.filter_by(id=current_user.id)
+    form = RegisterForm()
+    if form.validate_on_submit():
+        print(form.email.data)
+    return render_template('auth/register.html', form=form)
 
 
 @auth.route('/login', methods=['GET', 'POST'])

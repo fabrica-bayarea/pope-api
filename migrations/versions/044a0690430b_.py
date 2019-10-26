@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: a60f895ad51e
+Revision ID: 044a0690430b
 Revises: 
-Create Date: 2019-08-17 09:48:15.655824
+Create Date: 2019-08-29 12:18:16.281014
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'a60f895ad51e'
+revision = '044a0690430b'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -38,12 +38,12 @@ def upgrade():
     sa.Column('name', sa.String(length=100), nullable=True),
     sa.Column('tell', sa.String(length=150), nullable=True),
     sa.Column('email', sa.String(length=150), nullable=True),
-    sa.Column('sector', sa.String(length=150), nullable=True),
     sa.Column('address', sa.String(length=150), nullable=True),
     sa.Column('city', sa.String(length=150), nullable=True),
     sa.Column('description', sa.Text(), nullable=True),
     sa.Column('free', sa.Boolean(), nullable=True),
     sa.Column('id_area', sa.Integer(), nullable=True),
+    sa.Column('id_sub_area', sa.Integer(), nullable=True),
     sa.Column('id_attendance', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email'),
@@ -55,7 +55,6 @@ def upgrade():
     sa.Column('name', sa.String(length=25), nullable=True),
     sa.Column('description', sa.Text(), nullable=True),
     sa.Column('id_area', sa.Integer(), nullable=True),
-    sa.Column('id_attendance', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('name')
     )
